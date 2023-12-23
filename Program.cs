@@ -17,4 +17,17 @@ class Program
         Console.WriteLine("Результат:");
         Console.WriteLine(string.Join(", ", resultArray));
     }
+
+    static string[] FilterStrings(string[] inputArray)
+    {
+        // Подсчитываем количество строк, удовлетворяющих условию (длина <= 3)
+        int count = 0;
+        foreach (string str in inputArray)
+        {
+            if (str.Length <= 3)
+            {
+                count++;
+            }
+        }
+    }
 }
