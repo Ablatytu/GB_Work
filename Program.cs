@@ -29,5 +29,21 @@ class Program
                 count++;
             }
         }
+
+        // Создаем новый массив нужной длины
+        string[] resultArray = new string[count];
+
+        // Заполняем новый массив подходящими строками
+        int index = 0;
+        foreach (string str in inputArray)
+        {
+            if (str.Length <= 3)
+            {
+                resultArray[index] = str;
+                index++;
+            }
+        }
+
+        return resultArray;
     }
 }
